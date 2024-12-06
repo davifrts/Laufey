@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cap.css">
+    <title>Cap:Laufey Book Club</title>
+</head>
+<body>
+    <img src="nah thats cap.avif" alt="Image of the cap saying Laufey Book Club" style="margin-top: 50px; width: 750px;">
+
+    <div class="text001">
+        <h2 id="text01">Laufey</h2>
+        <h1 id="text1">Cap:Laufey Book Club</h1>
+        <h2 id="001">13,99&nbsp;€</h2>
+    </div>
+
+    <div class="container">
+        <label for="quantidade">Quantity:</label>
+        <select id="quantidade">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+
+        <p>Total Price: <span id="preco">13,99&nbsp;€</span></p>
+
+        <button id="addCarrinho">Add to cart</button>
+    </div>
+
+    
+
+    <div class="text002">
+        
+        <h3>"Maybe one day, I'll fall in a bookstore❤..."</h3>
+         
+    </div>
+
+    <script>
+        const dropdown = document.getElementById("quantidade");
+        const preco = document.getElementById("preco");
+        const botao = document.getElementById("addCarrinho");
+
+        // Preço unitário do produto
+        const precoUnitario = 13.99;
+
+        // Atualiza o preço total com base na quantidade selecionada
+        dropdown.addEventListener("change", () => {
+            const total = precoUnitario * dropdown.value;
+            preco.textContent = `${total.toFixed(2).replace(".", ",")}\u00A0€`;
+        });
+
+        // Exibe a mensagem ao adicionar ao carrinho
+        botao.addEventListener("click", () => {
+            const quantidade = dropdown.value;
+            window.alert(`You added ${quantidade} item(s) to your cart. Total price: ${preco.textContent}.`);
+        });
+    </script>
+</body>
+</html>

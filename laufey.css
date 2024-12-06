@@ -1,0 +1,66 @@
+body {
+    background-color: #061f40;
+    overflow-x: hidden;
+}
+#title1 {
+    text-align:center;
+    color: white;
+    font-size: 70px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+#image1 {
+    float: right;
+}
+
+#image2 {
+    float: right;
+    
+}
+
+.div1 {
+    color: white;
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#button1 {
+    border-radius: 50px;       /* Arredondamento */
+    font-size: 40px;           /* Tamanho do texto */
+    background-color: transparent; /* Fundo transparente */
+    color: white;              /* Texto branco */
+    border: 2px solid white;   /* Borda branca */
+    cursor: pointer;           /* Indicador de botão clicável */
+    padding: 20px 40px;        /* Aumenta o espaço interno (tamanho do botão) */
+    transition: 0.3s;          /* Suavidade nas transições */
+}
+
+/* Efeito ao passar o mouse */
+#button1:hover {
+    background-color: white;   /* Fundo branco */
+    color: black;              /* Texto preto */
+    transition: 0.3s;          /* Suavidade na mudança */
+}
+
+
+
+
+#button2{
+    border-radius: 50px;       /* Arredondamento */
+    font-size: 40px;           /* Tamanho do texto */
+    background-color: transparent; /* Fundo transparente */
+    color: white;              /* Texto branco */
+    border: 2px solid white;   /* Borda branca */
+    cursor: pointer;           /* Indicador de botão clicável */
+    padding: 20px 40px;        /* Aumenta o espaço interno (tamanho do botão) */
+    transition: 0.3s;          /* Suavidade nas transições */
+}
+
+/* Efeito ao passar o mouse */
+#button2:hover {
+    background-color: white;   /* Fundo branco */
+    color: black;              /* Texto preto */
+    transition: 0.3s;          /* Suavidade na mudança */
+}
+
+

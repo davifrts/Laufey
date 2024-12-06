@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="autumnversion.css">
+    <title>Bewitched: The Album</title>
+</head>
+<body>
+    <img src="image-removebg-preview (2).png" alt="Image of the album Bewitched: The Goddess Edition" style="margin-top: 50px;">
+
+    <div class="text001">
+        <h2 id="text01">Laufey</h2>
+        <h1 id="text1">Bewitched: The Album</h1>
+        <h2 id="001">26,99&nbsp;€</h2>
+    </div>
+
+    <div class="container">
+        <label for="quantidade">Quantity:</label>
+        <select id="quantidade">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+
+        <p>Total Price: <span id="preco">26,99&nbsp;€</span></p>
+
+        <button id="addCarrinho">Add to cart</button>
+    </div>
+
+    
+
+    <div class="text002">
+        <h3>1-Dreamer</h3>
+        <h3>2-Second Best</h3>
+        <h3>3-Haunted</h3>
+        <h3>4-Must be Love</h3>
+        <h3>5-While you were sleeping</h3>
+        <h3>6-Lovesick</h3>
+        <h3>7-California and Me</h3>
+        <h3>8-Nocture (Interluder)</h3>
+        <h3>9-Promise</h3>
+        <h3>10-From the Start</h3>
+        <h3>11-Misty</h3>
+        <h3>12-Serendipity</h3>
+        <h3>13-Letter To My 13 Year Old Self</h3>
+        <h3>14-Bewtiched</h3>
+        <h3>15-Bored</h3>
+        <h3>16-Trouble</h3>
+        <h3>17-It Could Happen To You</h3>
+         
+    </div>
+
+    <script>
+        const dropdown = document.getElementById("quantidade");
+        const preco = document.getElementById("preco");
+        const botao = document.getElementById("addCarrinho");
+
+        // Preço unitário do produto
+        const precoUnitario = 26.99;
+
+        // Atualiza o preço total com base na quantidade selecionada
+        dropdown.addEventListener("change", () => {
+            const total = precoUnitario * dropdown.value;
+            preco.textContent = `${total.toFixed(2).replace(".", ",")}\u00A0€`;
+        });
+
+        // Exibe a mensagem ao adicionar ao carrinho
+        botao.addEventListener("click", () => {
+            const quantidade = dropdown.value;
+            window.alert(`You added ${quantidade} item(s) to your cart. Total price: ${preco.textContent}.`);
+        });
+    </script>
+</body>
+</html>

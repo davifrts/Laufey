@@ -1,0 +1,86 @@
+body {
+    background-color: #061f40;
+    overflow-x: hidden;
+}
+
+
+.images {
+
+    display: grid;
+    float: left;
+    margin-right: 20px;
+    gap: 300px;
+    margin: 0;
+}
+
+#goddess {
+    margin-bottom: 0;
+}
+
+#bewitched {
+    margin-top: 0;
+    margin-left: 20px;
+}
+
+/* Definindo o grid container */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de largura igual */
+    gap: 50px; /* Ajuste o espaço entre os itens */
+    justify-items: center; /* Alinha os itens no centro da coluna */
+    padding: 20px; /* Adiciona um pouco de padding ao redor */
+}
+
+/* Estilos do produto */
+.product {
+    display: flex;
+    flex-direction: column; /* Empilha os itens verticalmente */
+    align-items: center; /* Centraliza o conteúdo de cada produto */
+    gap: 10px; /* Adiciona um pequeno espaço entre o nome, preço e botão */
+}
+
+/* Detalhes do produto: preço e botão */
+.details {
+    display: flex;
+    flex-direction: row; /* Coloca o preço e o botão lado a lado */
+    gap: 10px; /* Espaço entre o preço e o botão */
+}
+
+/* Nome do produto */
+h1 {
+    margin: 0;
+    color: white; /* Cor do nome do produto */
+    font-size: 24px; /* Ajuste o tamanho do nome */
+}
+
+/* Preço do produto */
+.price {
+    font-size: 20px;
+    color: green;
+}
+
+/* Estilos do botão */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Efeito de transição */
+}
+
+/* Efeito do hover no botão */
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr 1fr; /* 2 colunas em telas menores */
+        gap: 20px; /* Menor gap */
+    }
+}
